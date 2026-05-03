@@ -33,7 +33,6 @@ int main(void) {
 
     size_t N = 100;   // 100 prove diverse con la stessa dimensione //
 
-    /*cercare la dimensione di cutoff facendo delle prove sui cicli for*/
     for (size_t i=150; i <= 300; i++) {
 
         /* creo una matrice 100 x i */
@@ -109,7 +108,7 @@ int main(void) {
 
     } 
 
-  /*  cout << "BUBBLE SORT times:\n";
+    cout << "BUBBLE SORT times:\n";
     print_vector(times_bub_sort);
     cout << "--------------------------------------------------------------------\n\n";
 
@@ -136,15 +135,6 @@ int main(void) {
     cout << "STD SORT times:\n";
     print_vector(times_std_sort);
     cout << "--------------------------------------------------------------------\n\n";
-*/
-
-    print_vector(times_bub_sort); cout<<";";
-    print_vector(times_sel_sort); cout<<";";
-    print_vector(times_ins_sort); cout<<";";
-    print_vector(times_mer_sort); cout<<";";
-    print_vector(times_qck_sort); cout<<";";
-    print_vector(times_qckhyb_sort); cout<<";";
-    print_vector(times_std_sort); cout<<";";
 
     return EXIT_SUCCESS;
 }
