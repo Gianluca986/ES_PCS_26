@@ -1,0 +1,3 @@
+Nonostante il testo dell'esercitazione chiedesse di misurare i tempi per dimensioni del vettore < 100, poiché avevo sempre lo stesso risultato, ovvero che l'insertion sort risultava essere più rapido degli algoritmi logaritmici, ho aumentato la dimensione del vettore su cui misurare i tempi fino a N maggiori; nel dettaglio:
+Per size = (10:30:1000)' si ha che il merge sort diventa "più veloce" dell'insertion sort per size = 450.
+Facendo invece variare la dimensione del vettore da (150 a 300) si ha che per size = 200 si ha che il quick sort è "più veloce" di insertion sort per cui la soglia del quick sort hybrid è cutoff = 200.
