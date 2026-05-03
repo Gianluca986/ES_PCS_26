@@ -180,7 +180,7 @@ void insertion_sort_range(vector<T>& vec, int left, int right) {
 
 template<typename T>
 void quick_sort_hybrid(vector<T>& vec, int left, int right) {
-    const int cutoff = 64; // soglia dopo cui l'insertion sort è peggio del quick sort
+    const int cutoff = 200; // soglia dopo cui l'insertion sort è peggio del quick sort
     if (vec.size() <= 1) return; 
 
     if (right-left+1 < cutoff) {
