@@ -2,12 +2,12 @@
 #include <Eigen/Dense>
 
 /*
- * Nota sull'argomento 'steps':
- * Ho passato la variabile steps per riferimento (int&) per poter estrarre il 
- * numero di iterazioni impiegate dall'algoritmo. Poiché la funzione 
- * restituisce già il vettore soluzione (Eigen::VectorXd), questo approccio 
- * mi permette di aggiornare direttamente una variabile del chiamante (es. nel test) 
- * senza dover creare strutture dati complesse per un ritorno multiplo.
+   Nota sull'argomento 'steps':
+   Ho passato la variabile steps per riferimento (int&) per poter estrarre il 
+   numero di iterazioni impiegate dall'algoritmo. Poiché la funzione 
+   restituisce già il vettore soluzione (Eigen::VectorXd), questo approccio 
+   mi permette di aggiornare direttamente una variabile del chiamante (es. nel test) 
+   senza dover creare strutture dati complesse per un ritorno multiplo.
  */
 Eigen::VectorXd conjugate_gradient(const Eigen::MatrixXd& A, const Eigen::VectorXd& b, const Eigen::VectorXd& x0, int it_max, double res_tol, int& steps) {
 
@@ -32,14 +32,10 @@ Eigen::VectorXd conjugate_gradient(const Eigen::MatrixXd& A, const Eigen::Vector
     {
         auto pAp = p.dot(A * p);
 
-        /*controllo che la matrice A sia simmetrica e definita positiva*/
-        if (pAp <= 0.0) return Eigen::VectorXd::Zero(x0.size()); // A non è definita positiva
-
         const double alpha_k = p.dot(res) / pAp;
 
         x = x + alpha_k * p;
         res = b - A * x;
-
 
         const double beta_k = p.dot(A * res) / pAp;
         

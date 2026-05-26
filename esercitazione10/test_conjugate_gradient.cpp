@@ -5,7 +5,6 @@
 
 
 /*Funzione per generare la dimensione della matrice di test*/
-/* Uguale a quella del file randfiller.h*/
 int random_dim(int min, int max) {
     randfiller rf;
     std::vector<int> v(1);
@@ -68,7 +67,6 @@ int main() {
 
         }
     }
-
 
     std::cout << "Test Successful \n";
     return EXIT_SUCCESS;
