@@ -43,6 +43,7 @@ Eigen::VectorXd conjugate_gradient(const Eigen::MatrixXd& A, const Eigen::Vector
         it++;
     }
 
+    
     steps = it;
     return x;
 }
