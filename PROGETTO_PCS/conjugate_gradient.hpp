@@ -31,7 +31,7 @@ inline Eigen::VectorXd conjugate_gradient(const Eigen::MatrixXd& A, const Eigen:
     while (it < it_max && res.norm() > res_tol * res0_norm)  // norma del residuo RELATIVA
     {
         auto pAp = p.dot(A * p);
-        if (pAp == 0.0) {break; }
+        if (pAp <= 1.0e-16) {break; }
         const double alpha_k = p.dot(res) / pAp;
 
         x = x + alpha_k * p;
